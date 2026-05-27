@@ -81,22 +81,10 @@
       pointer-events:none;
     }
 
-    /* ── Chandelier ── */
-    .chandelier-wrap {
-      position:relative; z-index:5;
-      margin-top: 28px;
-      animation: chandelier-sway 6s ease-in-out infinite;
-      transform-origin: 50% 0;
-    }
-    @keyframes chandelier-sway {
-      0%,100% { transform: rotate(-0.8deg); }
-      50%      { transform: rotate(0.8deg); }
-    }
-
     /* ── Names & date ── */
     .hero-names-block {
       position:relative; z-index:5;
-      text-align:center; margin-top:4px; margin-bottom:0;
+      text-align:center; margin-top:80px; margin-bottom:0;
     }
     .hero-names {
       font-family: 'Great Vibes', cursive;
@@ -798,119 +786,6 @@
     </svg>
   </div>
 
-  <!-- ── Chandelier ── -->
-  <div class="chandelier-wrap">
-    <svg width="220" height="170" viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%"  stop-color="#7a7d68"/>
-          <stop offset="50%" stop-color="#666956"/>
-          <stop offset="100%" stop-color="#7a7d68"/>
-        </linearGradient>
-      </defs>
-
-      <!-- Ceiling mount -->
-      <rect x="103" y="0" width="14" height="8" rx="3" fill="url(#goldLine)"/>
-      <path d="M108,8 Q110,2 112,8" fill="#7a7d68"/>
-      <!-- Main chain -->
-      <line x1="110" y1="8" x2="110" y2="30" stroke="url(#goldLine)" stroke-width="2.5"/>
-
-      <!-- Top crown ring -->
-      <ellipse cx="110" cy="34" rx="32" ry="7" fill="none" stroke="url(#goldLine)" stroke-width="2"/>
-      <!-- Scrollwork on ring -->
-      <path d="M78,34 Q82,28 86,34" fill="none" stroke="#7a7d68" stroke-width="1.2"/>
-      <path d="M134,34 Q138,28 142,34" fill="none" stroke="#7a7d68" stroke-width="1.2"/>
-
-      <!-- Centre chain continues -->
-      <line x1="110" y1="41" x2="110" y2="65" stroke="url(#goldLine)" stroke-width="2"/>
-
-      <!-- ── Left outer arm ── -->
-      <path d="M78,37 Q55,37 48,54 Q44,65 50,72" fill="none" stroke="url(#goldLine)" stroke-width="2"/>
-      <!-- Left arm scroll -->
-      <path d="M50,68 Q44,75 50,78 Q56,75 50,68Z" fill="#7a7d68" opacity=".6"/>
-      <!-- Left cup -->
-      <path d="M46,78 L54,78 L55,88 L45,88 Z" fill="none" stroke="url(#goldLine)" stroke-width="1.8"/>
-      <!-- Left candle -->
-      <rect x="48" y="70" width="4" height="10" rx="1" fill="#ede0c4"/>
-      <!-- Left flame -->
-      <ellipse cx="50" cy="69" rx="3" ry="4" fill="#8a8d78" opacity=".8">
-        <animate attributeName="ry" values="4;5;3.5;4" dur="1.8s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="50" cy="68" rx="1.5" ry="2.5" fill="#e8e9d8" opacity=".9">
-        <animate attributeName="ry" values="2.5;3.5;2;2.5" dur="1.8s" repeatCount="indefinite"/>
-      </ellipse>
-      <!-- Left drops -->
-      <path d="M47,88 L46,96 Q47,99 48,96 L47,88Z" fill="#7a7d68" opacity=".5"/>
-      <path d="M50,88 L49,98 Q50,102 51,98 L50,88Z" fill="#7a7d68" opacity=".7"/>
-      <path d="M53,88 L52,94 Q53,97 54,94 L53,88Z" fill="#7a7d68" opacity=".5"/>
-
-      <!-- ── Left inner arm ── -->
-      <path d="M90,40 Q78,40 74,55 Q72,64 76,69" fill="none" stroke="url(#goldLine)" stroke-width="1.6"/>
-      <path d="M73,66 Q69,72 74,74 Q79,72 74,66Z" fill="#7a7d68" opacity=".5"/>
-      <path d="M70,74 L78,74 L79,82 L69,82 Z" fill="none" stroke="url(#goldLine)" stroke-width="1.5"/>
-      <rect x="72" y="66" width="4" height="9" rx="1" fill="#ede0c4"/>
-      <ellipse cx="74" cy="65" rx="2.5" ry="3.5" fill="#8a8d78" opacity=".75">
-        <animate attributeName="ry" values="3.5;4.5;3;3.5" dur="2.1s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="74" cy="64" rx="1.2" ry="2" fill="#e8e9d8" opacity=".9">
-        <animate attributeName="ry" values="2;3;1.8;2" dur="2.1s" repeatCount="indefinite"/>
-      </ellipse>
-      <path d="M71,82 L70,89 Q71,92 72,89 L71,82Z" fill="#7a7d68" opacity=".5"/>
-      <path d="M74,82 L73,91 Q74,94 75,91 L74,82Z" fill="#7a7d68" opacity=".65"/>
-      <path d="M77,82 L76,88 Q77,91 78,88 L77,82Z" fill="#7a7d68" opacity=".5"/>
-
-      <!-- ── Centre arm ── -->
-      <path d="M110,65 L110,82" stroke="url(#goldLine)" stroke-width="1.8"/>
-      <path d="M104,82 L116,82 L118,95 L102,95 Z" fill="none" stroke="url(#goldLine)" stroke-width="1.8"/>
-      <rect x="107" y="72" width="6" height="12" rx="1.5" fill="#ede0c4"/>
-      <!-- Centre flame -->
-      <ellipse cx="110" cy="70" rx="3.5" ry="5" fill="#8a8d78" opacity=".85">
-        <animate attributeName="ry" values="5;6;4;5" dur="1.5s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="110" cy="69" rx="2" ry="3" fill="#e8e9d8" opacity=".9">
-        <animate attributeName="ry" values="3;4;2.5;3" dur="1.5s" repeatCount="indefinite"/>
-      </ellipse>
-      <!-- Centre large pendant -->
-      <path d="M107,95 L108,108 Q110,114 112,108 L113,95Z" fill="#7a7d68" opacity=".8"/>
-      <ellipse cx="110" cy="114" rx="3" ry="4" fill="#7a7d68" opacity=".6"/>
-      <!-- Centre drops -->
-      <path d="M104,95 L103,104 Q104,108 105,104 L104,95Z" fill="#7a7d68" opacity=".5"/>
-      <path d="M116,95 L115,103 Q116,107 117,103 L116,95Z" fill="#7a7d68" opacity=".5"/>
-
-      <!-- ── Right inner arm ── -->
-      <path d="M130,40 Q142,40 146,55 Q148,64 144,69" fill="none" stroke="url(#goldLine)" stroke-width="1.6"/>
-      <path d="M147,66 Q151,72 146,74 Q141,72 146,66Z" fill="#7a7d68" opacity=".5"/>
-      <path d="M142,74 L150,74 L151,82 L141,82 Z" fill="none" stroke="url(#goldLine)" stroke-width="1.5"/>
-      <rect x="144" y="66" width="4" height="9" rx="1" fill="#ede0c4"/>
-      <ellipse cx="146" cy="65" rx="2.5" ry="3.5" fill="#8a8d78" opacity=".75">
-        <animate attributeName="ry" values="3.5;4.5;3;3.5" dur="2.3s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="146" cy="64" rx="1.2" ry="2" fill="#e8e9d8" opacity=".9">
-        <animate attributeName="ry" values="2;3;1.8;2" dur="2.3s" repeatCount="indefinite"/>
-      </ellipse>
-      <path d="M143,82 L142,89 Q143,92 144,89 L143,82Z" fill="#7a7d68" opacity=".5"/>
-      <path d="M146,82 L145,91 Q146,94 147,91 L146,82Z" fill="#7a7d68" opacity=".65"/>
-      <path d="M149,82 L148,88 Q149,91 150,88 L149,82Z" fill="#7a7d68" opacity=".5"/>
-
-      <!-- ── Right outer arm ── -->
-      <path d="M142,37 Q165,37 172,54 Q176,65 170,72" fill="none" stroke="url(#goldLine)" stroke-width="2"/>
-      <path d="M170,68 Q176,75 170,78 Q164,75 170,68Z" fill="#7a7d68" opacity=".6"/>
-      <path d="M166,78 L174,78 L175,88 L165,88 Z" fill="none" stroke="url(#goldLine)" stroke-width="1.8"/>
-      <rect x="168" y="70" width="4" height="10" rx="1" fill="#ede0c4"/>
-      <ellipse cx="170" cy="69" rx="3" ry="4" fill="#8a8d78" opacity=".8">
-        <animate attributeName="ry" values="4;5;3.5;4" dur="2s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="170" cy="68" rx="1.5" ry="2.5" fill="#e8e9d8" opacity=".9">
-        <animate attributeName="ry" values="2.5;3.5;2;2.5" dur="2s" repeatCount="indefinite"/>
-      </ellipse>
-      <path d="M167,88 L166,96 Q167,99 168,96 L167,88Z" fill="#7a7d68" opacity=".5"/>
-      <path d="M170,88 L169,98 Q170,102 171,98 L170,88Z" fill="#7a7d68" opacity=".7"/>
-      <path d="M173,88 L172,94 Q173,97 174,94 L173,88Z" fill="#7a7d68" opacity=".5"/>
-
-      <!-- Bottom ring -->
-      <ellipse cx="110" cy="66" rx="28" ry="5.5" fill="none" stroke="url(#goldLine)" stroke-width="1.5" opacity=".6"/>
-    </svg>
-  </div>
 
   <!-- ── Names & date ── -->
   <div class="hero-names-block">
