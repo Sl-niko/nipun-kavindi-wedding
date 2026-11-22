@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════
+   TEMPLATE PREVIEW · preview.html?demo=<key>[&guest=Name]
+   Shows the live invitation inside a phone on the template's own backdrop.
+═══════════════════════════════════════════════════ */
+:root { --ink:#2b1d16; --ink-soft:#8a7567; --gold:#b8873f; --gold-dark:#8a5f24; }
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html, body { height:100%; }
+body {
+  font-family:'Plus Jakarta Sans',sans-serif; color:var(--ink); overflow:hidden;
+  background:#f3ece2 center/cover no-repeat;
+}
+a { color:inherit; text-decoration:none; }
+.backdrop-tint { position:fixed; inset:0; pointer-events:none; }
+
+/* ── Floating controls ── */
+.ctl {
+  position:fixed; z-index:10; display:flex; align-items:center; gap:8px;
+  background:rgba(255,255,255,.72); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.85); border-radius:999px; box-shadow:0 6px 24px -10px rgba(60,35,20,.35);
+  font-size:14px; font-weight:600;
+}
+.back { top:16px; left:16px; padding:10px 18px 10px 14px; color:var(--ink); }
+.back:hover { background:#fff; }
+.switch { top:16px; right:16px; padding:4px; }
+.switch button {
+  width:36px; height:36px; border-radius:50%; border:none; background:transparent; cursor:pointer; color:var(--ink); font-size:13px;
+}
+.switch button:hover { background:rgba(0,0,0,.06); }
+.switch .name { padding:0 6px; display:flex; align-items:center; gap:8px; white-space:nowrap; }
+.switch .name i { color:var(--ink-soft); font-size:12px; }
+.switch .count { color:var(--ink-soft); font-weight:500; }
+.make {
+  position:fixed; z-index:10; left:16px; bottom:16px; display:flex; align-items:center; gap:8px;
+  padding:12px 20px; border-radius:999px; color:#fff; font-size:14px; font-weight:700;
+  background:linear-gradient(135deg, var(--gold), var(--gold-dark)); box-shadow:0 12px 30px -10px rgba(138,95,36,.7);
+  transition:transform .2s;
+}
+.make:hover { transform:translateY(-2px); }
+.make span { font-weight:500; opacity:.85; }
+.open-full {
+  position:fixed; z-index:10; right:16px; bottom:16px; padding:10px 16px; font-size:13px;
+}
+
+/* ── Phone ── */
+.stage { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; }
+.phone {
+  --w:390px; --h:844px;
+  width:calc(var(--w) + 28px); height:calc(var(--h) + 28px); padding:14px; border-radius:68px; position:relative;
+  background:linear-gradient(145deg,#3a3633,#0d0b0a 40%,#2a2623);
+  box-shadow:0 0 0 2px #8f8a85, 0 0 0 4px #1b1918, 0 50px 100px -30px rgba(40,20,10,.55), 0 20px 40px -20px rgba(0,0,0,.4);
+  transform-origin:center; flex-shrink:0;
+}
+/* side buttons */
+.phone::before, .phone::after { content:''; position:absolute; width:4px; border-radius:2px; background:#2a2623; }
+.phone::before { left:-6px; top:170px; height:100px; box-shadow:0 -70px 0 -0px #2a2623; }
+.phone::after  { right:-6px; top:210px; height:110px; }
+.screen { width:100%; height:100%; border-radius:54px; overflow:hidden; clip-path:inset(0 round 54px); background:#fff; position:relative; display:flex; flex-direction:column; }
+.statusbar {
+  height:54px; flex-shrink:0; display:flex; align-items:center; justify-content:space-between; padding:6px 34px 0 46px;
+  font-size:16px; font-weight:700; letter-spacing:-.01em; position:relative; z-index:2;
+}
+.statusbar .icons { display:flex; gap:7px; align-items:center; font-size:14px; }
+.island { position:absolute; top:12px; left:50%; transform:translateX(-50%); width:124px; height:36px; border-radius:20px; background:#000; z-index:3; }
+.screen iframe { flex:1; width:100%; border:0; display:block; }
+.home-bar { position:absolute; bottom:8px; left:50%; transform:translateX(-50%); width:136px; height:5px; border-radius:3px; background:rgba(0,0,0,.75); z-index:3; pointer-events:none; }
+
+/* ── Small screens: the visitor already holds a phone, so drop the frame ── */
+@media (max-width:600px) {
+  .stage { align-items:stretch; }
+  .phone { width:100%; height:100%; padding:0; border-radius:0; box-shadow:none; background:none; transform:none !important; }
+  .phone::before, .phone::after, .statusbar, .island, .home-bar { display:none; }
+  .screen { border-radius:0; }
+  .switch .name span:not(.count), .switch .name i { display:none; }
+  .back span { display:none; }
+  .back { padding:10px 13px; }
+  .open-full { display:none; }
+  .make { left:50%; transform:translateX(-50%); bottom:14px; }
+  .make:hover { transform:translateX(-50%); }
+}
