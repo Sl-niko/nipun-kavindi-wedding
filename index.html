@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom &amp; Vows · Wedding Invitations</title>
+  <link rel="icon" href="assets/images/logo.jpg">
+  <meta name="description" content="Beautiful digital wedding invitations with personal guest links, RSVP, music and maps. Ready in 24 hours.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-bar">
+      <a href="#" class="logo"><img src="assets/images/logo.jpg" alt=""><span>Bloom &amp; Vows</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#templates">Templates</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-dark btn-sm" href="#" data-wa="Hi! I'd like to order a digital wedding invitation."><i class="fab fa-whatsapp"></i><span>Get started</span></a>
+        <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav-links').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+    <div>
+      <span class="pill"><b>NEW</b> Royal Perahara template is live ✨</span>
+      <h1>Wedding invites<br>that feel like <span class="script grad-text">your love story</span></h1>
+      <p class="lead">
+        Animated digital invitations with every guest's name, your photos, music, a live countdown,
+        RSVP and maps. Shared in one tap on WhatsApp.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#templates">Browse templates <i class="fas fa-arrow-right"></i></a>
+        <a class="btn btn-light" href="preview.html?demo=perahara&guest=Mr.+%26+Mrs.+Perera"><i class="fas fa-play"></i> See a live demo</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>24h</b>Delivery</div>
+        <div><b>3</b>Languages</div>
+        <div><b>∞</b>Guest links</div>
+        <div><b>0</b>Apps needed</div>
+      </div>
+    </div>
+
+    <div class="phone-stage">
+      <div class="phone" aria-label="Live invitation preview">
+        <div class="phone-screen">
+          <iframe src="perahara.html?demo=perahara&preview=1&autoscroll=1&guest=Mr.+%26+Mrs.+Perera" title="Sample invitation" loading="eager"></iframe>
+        </div>
+      </div>
+      <div class="chip c1"><i class="fab fa-whatsapp"></i><div>Invite sent<small>to Mr. &amp; Mrs. Perera</small></div></div>
+      <div class="chip c2"><i class="fas fa-heart"></i><div>RSVP: Attending<small>2 guests · just now</small></div></div>
+      <div class="chip c3"><i class="fas fa-music"></i><div>Music on<small>Piano &amp; cello</small></div></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee"></div>
+</div>
+
+<!-- ── TEMPLATES ── -->
+<section id="templates">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Templates</span>
+      <h2>Find the design that <span class="script grad-text">feels like you</span></h2>
+      <p>Every design includes the opening animation, music, gallery, countdown, schedule and RSVP. Tap any one to try it live.</p>
+    </div>
+
+    <div class="tpl-tools reveal">
+      <div class="filters" id="filters"></div>
+      <label class="try-name">
+        <i class="fas fa-pen"></i>
+        <input id="try-input" type="text" maxlength="40" placeholder="Try it with a guest name…" aria-label="Guest name">
+      </label>
+    </div>
+
+    <div class="tpl-grid" id="tpl-grid"></div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section id="how" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Ready in <span class="script grad-text">three easy steps</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-num"><i class="fas fa-swatchbook"></i><em>1</em></div><h3>Pick a template</h3><p>Browse the designs and open any live demo right on your phone.</p></div>
+      <div class="step reveal"><div class="step-num"><i class="fas fa-paper-plane"></i><em>2</em></div><h3>Send us your details</h3><p>Names, date, venue, schedule, photos and your guest list. We do the rest within 24 hours.</p></div>
+      <div class="step reveal"><div class="step-num"><i class="fas fa-champagne-glasses"></i><em>3</em></div><h3>Share &amp; celebrate</h3><p>Send each guest their own link on WhatsApp and watch the RSVPs come in.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Everything included</span>
+      <h2>More than a <span class="script grad-text">pretty card</span></h2>
+      <p>All the little things that make your guests smile, and make planning easier for you.</p>
+    </div>
+    <div class="bento">
+      <div class="tile dark wide tall reveal">
+        <div class="ic"><i class="fas fa-user-tag"></i></div>
+        <div class="demo-link">
+          <b>Dear Mr. &amp; Mrs. Perera,</b> you're invited to Kavindi &amp; Nipun's wedding 🪷
+          <span class="url">bloomandvows.lk/kavindi-nipun?guest=Perera</span>
+        </div>
+        <h4>Personal guest links</h4>
+        <p>Every guest sees their own name on the invitation, sent straight to WhatsApp with a ready-written message.</p>
+      </div>
+      <div class="tile reveal"><div class="ic"><i class="fas fa-clipboard-check"></i></div><h4>RSVP tracking</h4><p>See who's coming and how many.</p></div>
+      <div class="tile reveal"><div class="ic"><i class="fas fa-hourglass-half"></i></div><h4>Live countdown</h4><p>Days, hours and minutes to the big day.</p></div>
+      <div class="tile rose wide reveal">
+        <div class="langs"><span>සිංහල</span><span>தமிழ்</span><span>English</span></div>
+        <div class="ic"><i class="fas fa-language"></i></div>
+        <h4>Three languages</h4><p>Sinhala, Tamil and English, or a mix of all three.</p>
+      </div>
+      <div class="tile reveal"><div class="ic"><i class="fas fa-music"></i></div><h4>Music &amp; opening</h4><p>A cinematic first moment with your song.</p></div>
+      <div class="tile reveal"><div class="ic"><i class="fas fa-map-location-dot"></i></div><h4>Maps &amp; calendar</h4><p>One-tap directions and "Add to Calendar".</p></div>
+      <div class="tile reveal"><div class="ic"><i class="fas fa-images"></i></div><h4>Photo gallery</h4><p>Show off your pre-shoot beautifully.</p></div>
+      <div class="tile reveal"><div class="ic"><i class="fas fa-mobile-screen"></i></div><h4>No app needed</h4><p>Opens instantly on any phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="wrap faq-wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Good to <span class="script grad-text">know</span></h2>
+      <p>Can't find what you're looking for? Message us on WhatsApp and we'll reply quickly.</p>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>How do my guests receive the invitation?</summary><p>You get a list of personal links, one per guest. Tap a guest's link and WhatsApp opens with a ready-written message, so you just press send.</p></details>
+      <details><summary>Can I change details after sending?</summary><p>Yes. If the time or venue changes, we update it and every guest's link shows the new details instantly. No need to resend.</p></details>
+      <details><summary>How long does it take?</summary><p>Template designs are ready within 24 hours of receiving your details. Fully custom designs take 3–5 days.</p></details>
+      <details><summary>Can I have separate invitations for the wedding and homecoming?</summary><p>Yes. We can set up two events, each with its own details and guest list. Just let us know when you order.</p></details>
+      <details><summary>How do I pay?</summary><p>Bank transfer or card. You only pay once you've approved the preview.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div>
+        <h2>Start your invitation <span class="script">tonight</span>.<br>Send it when it's perfect.</h2>
+        <p>Message us on WhatsApp and we'll send you a free preview of your invitation. You only pay when you love it.</p>
+        <div class="cta-btns">
+          <a class="btn btn-wa" href="#" data-wa="Hi! I'd like a free preview of my wedding invitation."><i class="fab fa-whatsapp"></i> Get a free preview</a>
+          <a class="btn btn-ghost-light" href="#templates">Browse templates</a>
+        </div>
+      </div>
+      <img class="cta-logo" src="assets/images/logo.jpg" alt="Bloom &amp; Vows">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo"><img src="assets/images/logo.jpg" alt=""><span>Bloom &amp; Vows</span></a>
+        <p class="tagline">Your Love Story, Our Design ♡</p>
+        <p>Beautiful digital wedding invitations for Sri Lankan weddings, delivered on WhatsApp.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" data-wa="Hi Bloom & Vows!" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="foot-col"><h5>Product</h5><a href="#templates">Templates</a><a href="#features">Features</a><a href="preview.html">Live demo</a></div>
+      <div class="foot-col"><h5>Support</h5><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="#" data-wa="Hi! I have a question.">Contact us</a></div>
+      <div class="foot-col"><h5>Legal</h5><a href="#">Privacy policy</a><a href="#">Terms of service</a><a href="#">Refund policy</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Bloom &amp; Vows Wedding Invitations</span>
+      <span>Made with ♡ in Sri Lanka</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa="Hi Bloom & Vows! I'd like to know more."><i class="fab fa-whatsapp"></i><span>Chat with us<small>on WhatsApp</small></span></a>
+
+<script src="js/demos.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>

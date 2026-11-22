@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Mea+Culpa&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/ivory.css">
+</head>
+<body>
+
+<div class="silk" id="silk"></div>
+<div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<div id="intro">
+  <div class="envelope">
+    <video id="env-video" muted playsinline preload="auto" disablepictureinpicture></video>
+  </div>
+  <button class="i-tap" onclick="openIntro()" aria-label="Open the invitation">
+    <span class="i-top">
+      <span class="eyebrow">You are invited to the wedding of</span>
+      <span class="i-names" id="i-names"></span>
+      <span class="i-date" id="i-date"></span>
+    </span>
+    <span class="i-bottom">
+      <span class="i-guest" id="i-guest"></span>
+      <span class="i-btn"><i class="fas fa-envelope-open-text"></i> Open Invitation</span>
+      <span class="i-hint">Tap to break the seal</span>
+    </span>
+  </button>
+</div>
+
+<audio id="bg-music" loop preload="none"></audio>
+<header class="topbar"><a href="#home" class="mono" id="mono"></a></header>
+<button class="music" id="music" onclick="toggleMusic()" aria-label="Turn music on"><i class="fas fa-volume-xmark"></i></button>
+
+<main id="app"></main>
+
+<nav class="nav" id="nav">
+  <a href="#home" class="on"><i class="fas fa-house"></i><span>Home</span></a>
+  <a href="#events"><i class="far fa-calendar"></i><span>Details</span></a>
+  <a href="#rsvp" class="rsvp-tab"><b><i class="far fa-envelope"></i></b><span>RSVP</span></a>
+  <a href="#gallery"><i class="far fa-image"></i><span>Gallery</span></a>
+  <a href="#venue"><i class="fas fa-location-dot"></i><span>Location</span></a>
+</nav>
+
+<div id="lightbox" onclick="this.classList.remove('show')"><img alt=""></div>
+
+<script src="js/demos.js"></script>
+<script src="js/ivory.js"></script>
+</body>
+</html>

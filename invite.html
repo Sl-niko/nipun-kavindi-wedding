@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/invite.css">
+</head>
+<body>
+
+<div id="env-intro">
+  <div class="env-bg" id="env-bg"></div>
+  <div class="env-scene">
+    <div class="env-backing"></div>
+    <div class="env-panel env-panel-left"></div>
+    <div class="env-panel env-panel-right"></div>
+    <div class="env-fold"></div>
+    <div class="env-content" id="env-content">
+      <div class="env-monogram" id="env-monogram"></div>
+      <button class="env-open-btn" onclick="openEnvelope()">TAP TO OPEN</button>
+    </div>
+  </div>
+</div>
+
+<audio id="bg-music" loop preload="none"></audio>
+<button class="music-btn" onclick="toggleMusic()">
+  <i class="fas fa-music" id="music-icon"></i>
+  <span id="music-label">Music</span>
+</button>
+
+<main id="app"></main>
+
+<div id="contact-modal" onclick="if(event.target===this)this.classList.remove('show')">
+  <div class="cm-box">
+    <button class="cm-close" onclick="document.getElementById('contact-modal').classList.remove('show')">&times;</button>
+    <div class="cm-title">Contact Us</div>
+    <div id="cm-people"></div>
+  </div>
+</div>
+
+<script src="js/demos.js"></script>
+<script src="js/invite.js"></script>
+</body>
+</html>

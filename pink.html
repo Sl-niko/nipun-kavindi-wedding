@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/pink.css">
+</head>
+<body>
+
+<div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<div id="intro">
+  <div class="wash" id="i-wash"></div>
+  <div class="sprigs" id="i-sprigs"></div>
+  <div class="i-stage">
+    <p class="i-invited">You’re Invited</p>
+    <p class="i-sub" id="i-sub"></p>
+    <div class="envelope" id="envelope">
+      <div class="env-shadow"></div>
+      <img class="env flap-in" id="env-flap-in" alt="">
+      <img class="env back" id="env-back" alt="">
+      <div class="letter">
+        <img id="env-letter" alt="">
+        <div class="letter-text" id="letter-text"></div>
+      </div>
+      <img class="env front" id="env-front" alt="">
+      <div class="flap-out">
+        <img class="env" id="env-flap-out" alt="">
+        <div class="for" id="env-for"></div>
+      </div>
+      <button class="seal" id="seal" onclick="openIntro()" aria-label="Open your invitation">
+        <img id="env-seal" alt=""><span id="seal-mono"></span>
+      </button>
+    </div>
+    <button class="i-hint" onclick="openIntro()">Tap the seal to open</button>
+  </div>
+</div>
+
+<audio id="bg-music" loop preload="none"></audio>
+<button class="music" id="music" onclick="toggleMusic()" aria-label="Play music"><i class="fas fa-music"></i></button>
+
+<main id="app"></main>
+
+<div id="lightbox" onclick="this.classList.remove('show')"><img alt=""></div>
+
+<script src="js/demos.js"></script>
+<script src="js/pink.js"></script>
+</body>
+</html>
